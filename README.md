@@ -1,1 +1,1 @@
-![Alt text](https://github.com/chenyufeng1991/NewsClient/raw/master/Screenshots/2.png)
+![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/string.png)
