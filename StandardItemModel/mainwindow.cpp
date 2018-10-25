@@ -228,7 +228,7 @@ void MainWindow::on_actSave_triggered()
     if(!(aFile.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Truncate)))
         return;
 
-    QTextStream *aStream(&aFile);
+    QTextStream aStream(&aFile);
     QStandardItem *aItem;
     int i,j;
     QString str;

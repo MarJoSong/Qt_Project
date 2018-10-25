@@ -70,7 +70,7 @@
    </attribute>
    <addaction name="actOpen"/>
    <addaction name="actSave"/>
-   <addaction name="action"/>
+   <addaction name="actiShow"/>
    <addaction name="separator"/>
    <addaction name="actAppend"/>
    <addaction name="actInsert"/>
@@ -86,7 +86,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actOpen">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/open.bmp</normaloff>:/images/icons/open.bmp</iconset>
    </property>
    <property name="text">
@@ -98,7 +98,7 @@
   </action>
   <action name="actSave">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/save.bmp</normaloff>:/images/icons/save.bmp</iconset>
    </property>
    <property name="text">
@@ -110,7 +110,7 @@
   </action>
   <action name="actAppend">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/append.bmp</normaloff>:/images/icons/append.bmp</iconset>
    </property>
    <property name="text">
@@ -122,7 +122,7 @@
   </action>
   <action name="actInsert">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/306.bmp</normaloff>:/images/icons/306.bmp</iconset>
    </property>
    <property name="text">
@@ -134,7 +134,7 @@
   </action>
   <action name="actDelete">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/delete.bmp</normaloff>:/images/icons/delete.bmp</iconset>
    </property>
    <property name="text">
@@ -146,7 +146,7 @@
   </action>
   <action name="actExit">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/exit.bmp</normaloff>:/images/icons/exit.bmp</iconset>
    </property>
    <property name="text">
@@ -156,9 +156,9 @@
     <string>退出</string>
    </property>
   </action>
-  <action name="action">
+  <action name="actiShow">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/import1.bmp</normaloff>:/images/icons/import1.bmp</iconset>
    </property>
    <property name="text">
@@ -170,7 +170,7 @@
   </action>
   <action name="actAlignLeft">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/508.bmp</normaloff>:/images/icons/508.bmp</iconset>
    </property>
    <property name="text">
@@ -182,7 +182,7 @@
   </action>
   <action name="actAlignCenter">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/510.bmp</normaloff>:/images/icons/510.bmp</iconset>
    </property>
    <property name="text">
@@ -194,7 +194,7 @@
   </action>
   <action name="actAlignRight">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/512.bmp</normaloff>:/images/icons/512.bmp</iconset>
    </property>
    <property name="text">
@@ -206,7 +206,7 @@
   </action>
   <action name="actFontBold">
    <property name="icon">
-    <iconset resource="D:/QT5.9Samp/chap05ModelView/samp5_3StandardModel/res.qrc">
+    <iconset resource="res.qrc">
      <normaloff>:/images/icons/500.bmp</normaloff>:/images/icons/500.bmp</iconset>
    </property>
    <property name="text">
@@ -218,6 +218,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>
