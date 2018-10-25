@@ -21,3 +21,6 @@
 
 <h1>StandardItemModel</h1>
 ![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/StandardItemModel.png)
+
+<h1>BookManger</h1>
+![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/BookManger.png)
