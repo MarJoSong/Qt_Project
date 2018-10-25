@@ -104,3 +104,24 @@ void MainWindow::on_actOpen_triggered()
     }
 
 }
+
+void MainWindow::on_actAppend_triggered()
+{
+    QList<QStandardItem*> aItemList;
+    QStandardItem *aItem;
+    for(int i=0; i < FixedColumnCount-1; i++)
+    {
+        aItem = new QStandardItem("0");
+        aItemList << aItem;
+    }
+    QString str = model->headerData(model->columnCount()-1, Qt::Horizontal,
+                                    Qt::DisplayRole).toString();
+    aItem = new QStandardItem(str);
+    aItem->setCheckable(true);
+    aItemList << aItem;
+
+    model->insertRow(model->rowCount(), aItemList);
+    QModelIndex curIndex = model->index(model->rowCount()-1, 0);
+    selection->clearSelection();
+    selection->setCurrentIndex(curIndex, QItemSelectionModel::Select);
+}
