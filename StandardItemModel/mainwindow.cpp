@@ -33,6 +33,36 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::iniModelFromStringList(QStringList &aFileContent)
+{
+    int rowCount = aFileContent.count();
+    model->setRowCount(rowCount - 1);
+    QString header = aFileContent.at(0);
+    QStringList headerList = header.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+    model->setHorizontalHeaderLabels(headerList);
+
+    QStandardItem *aItem;
+    QStringList tmpList;
+    int j;
+    for(int i=1; i<rowCount; i++)
+    {
+        QString aLineText = aFileContent.at(i);
+        tmpList = aLineText.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+        for(j=0; j<FixedColumnCount-1; j++)
+        {
+            aItem = new QStandardItem(tmpList.at(j));
+            model->setItem(i-1, j, aItem);
+        }
+        aItem = new QStandardItem(headerList.at(j));
+        aItem->setCheckable(true);
+        if(tmpList.at(j) == "0")
+            aItem->setCheckState(Qt::Unchecked);
+        else
+            aItem->setCheckState(Qt::Checked);
+        model->setItem(i-1, j, aItem);
+    }
+}
+
 void MainWindow::on_currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
     Q_UNUSED(previous)
@@ -71,8 +101,6 @@ void MainWindow::on_actOpen_triggered()
         aFile.close();
         this->labCurFile->setText("当前文件: " + aFileName);
         iniModelFromStringList(fFileContent);
-
-
     }
 
 }
