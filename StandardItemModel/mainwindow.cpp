@@ -263,5 +263,23 @@ void MainWindow::on_actSave_triggered()
 
 void MainWindow::on_actiShow_triggered()
 {
-
+    QStandardItem *aItem;
+    int i,j;
+    QString str;
+    ui->plainTextEdit->clear();
+    for(i=0; i<model->rowCount(); i++)
+    {
+        str = "";
+        for(j=0; j<model->columnCount()-1; j++)
+        {
+            aItem = model->item(i, j);
+            str = str + aItem->text() + QString::asprintf("\t\t");
+        }
+        aItem = model->item(i, j);
+        if(aItem->checkState()==Qt::Checked)
+            str = str + "1";
+        else
+            str = str + "0";
+        ui->plainTextEdit->appendPlainText(str);
+    }
 }
