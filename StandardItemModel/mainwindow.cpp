@@ -214,3 +214,54 @@ void MainWindow::on_actFontBold_triggered(bool checked)
         aItem->setFont(font);
     }
 }
+
+
+
+void MainWindow::on_actSave_triggered()
+{
+    QString curPath = QCoreApplication::applicationDirPath();
+    QString aFileName = QFileDialog::getOpenFileName(this, "打开一个文件",
+            curPath, "井数据文件(*.txt);;所有文件(*.*)");
+    if(aFileName.isEmpty())
+        return;
+    QFile aFile(aFileName);
+    if(!(aFile.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Truncate)))
+        return;
+
+    QTextStream *aStream(&aFile);
+    QStandardItem *aItem;
+    int i,j;
+    QString str;
+    ui->plainTextEdit->clear();
+
+    for(int i=0; i<model->columnCount(); i++)
+    {
+        aItem = model->horizontalHeaderItem(i);
+        str = str + aItem->text() + "\t\t";
+    }
+
+    aStream << str << "\n";
+    ui->plainTextEdit->appendPlainText(str);
+
+    for(i=0; i<model->rowCount(); i++)
+    {
+        str = "";
+        for(j=0; j<model->columnCount()-1; j++)
+        {
+            aItem = model->item(i, j);
+            str = str + aItem->text() + QString::asprintf("\t\t");
+        }
+        aItem = model->item(i, j);
+        if(aItem->checkState()==Qt::Checked)
+            str = str + "1";
+        else
+            str = str + "0";
+        ui->plainTextEdit->appendPlainText(str);
+        aStream << str << "\n";
+    }
+}
+
+void MainWindow::on_actiShow_triggered()
+{
+
+}

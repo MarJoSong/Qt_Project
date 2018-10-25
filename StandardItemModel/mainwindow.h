@@ -38,6 +38,8 @@ private slots:
     void on_actAlignCenter_triggered();
     void on_actAlignRight_triggered();
     void on_actFontBold_triggered(bool checked);
+    void on_actSave_triggered();
+    void on_actiShow_triggered();
 };
 
 #endif // MAINWINDOW_H
