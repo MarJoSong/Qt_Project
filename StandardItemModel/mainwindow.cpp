@@ -125,3 +125,38 @@ void MainWindow::on_actAppend_triggered()
     selection->clearSelection();
     selection->setCurrentIndex(curIndex, QItemSelectionModel::Select);
 }
+
+void MainWindow::on_actInsert_triggered()
+{
+    QList<QStandardItem*> aItemList;
+    QStandardItem *aItem;
+    for(int i=0; i < FixedColumnCount-1; i++)
+    {
+        aItem = new QStandardItem("0");
+        aItemList << aItem;
+    }
+    QString str = model->headerData(model->columnCount()-1, Qt::Horizontal,
+                                    Qt::DisplayRole).toString();
+    aItem = new QStandardItem(str);
+    aItem->setCheckable(true);
+    aItemList << aItem;
+
+    QModelIndex index = ui->tableView->currentIndex();
+    model->insertRow(index.row(), aItemList);
+    QModelIndex curIndex = model->index(model->rowCount()-1, 0);
+    selection->clearSelection();
+    selection->setCurrentIndex(curIndex, QItemSelectionModel::Select);
+}
+
+void MainWindow::on_actDelete_triggered()
+{
+    QModelIndex curIndex = ui->tableView->currentIndex();
+    if(curIndex.row()==model->rowCount()-1)
+        model->removeRow(curIndex.row());
+    else
+    {
+        model->removeRow(curIndex.row());
+        selection->setCurrentIndex(curIndex, QItemSelectionModel::Select);
+    }
+
+}

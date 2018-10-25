@@ -32,6 +32,8 @@ private slots:
     void on_currentChanged(const QModelIndex &current, const QModelIndex &previous);
     void on_actOpen_triggered();
     void on_actAppend_triggered();
+    void on_actInsert_triggered();
+    void on_actDelete_triggered();
 };
 
 #endif // MAINWINDOW_H
