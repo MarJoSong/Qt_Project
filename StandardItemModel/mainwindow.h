@@ -34,6 +34,10 @@ private slots:
     void on_actAppend_triggered();
     void on_actInsert_triggered();
     void on_actDelete_triggered();
+    void on_actAlignLeft_triggered();
+    void on_actAlignCenter_triggered();
+    void on_actAlignRight_triggered();
+    void on_actFontBold_triggered(bool checked);
 };
 
 #endif // MAINWINDOW_H

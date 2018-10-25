@@ -160,3 +160,57 @@ void MainWindow::on_actDelete_triggered()
     }
 
 }
+
+void MainWindow::on_actAlignLeft_triggered()
+{
+    if(!selection->hasSelection())
+        return;
+    QModelIndexList selectedIndex = selection->selectedIndexes();
+    for(int i=0; i<selectedIndex.count(); i++)
+    {
+        QModelIndex aIndex = selectedIndex.at(i);
+        QStandardItem *aItem = model->itemFromIndex(aIndex);
+        aItem->setTextAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    }
+}
+
+void MainWindow::on_actAlignCenter_triggered()
+{
+    if(!selection->hasSelection())
+        return;
+    QModelIndexList selectedIndex = selection->selectedIndexes();
+    for(int i=0; i<selectedIndex.count(); i++)
+    {
+        QModelIndex aIndex = selectedIndex.at(i);
+        QStandardItem *aItem = model->itemFromIndex(aIndex);
+        aItem->setTextAlignment(Qt::AlignCenter);
+    }
+}
+
+void MainWindow::on_actAlignRight_triggered()
+{
+    if(!selection->hasSelection())
+        return;
+    QModelIndexList selectedIndex = selection->selectedIndexes();
+    for(int i=0; i<selectedIndex.count(); i++)
+    {
+        QModelIndex aIndex = selectedIndex.at(i);
+        QStandardItem *aItem = model->itemFromIndex(aIndex);
+        aItem->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    }
+}
+
+void MainWindow::on_actFontBold_triggered(bool checked)
+{
+    if(!selection->hasSelection())
+        return;
+    QModelIndexList selectedIndex = selection->selectedIndexes();
+    for(int i=0; i<selectedIndex.count(); i++)
+    {
+        QModelIndex aIndex = selectedIndex.at(i);
+        QStandardItem *aItem = model->itemFromIndex(aIndex);
+        QFont font = aItem->font();
+        font.setBold(checked);
+        aItem->setFont(font);
+    }
+}
