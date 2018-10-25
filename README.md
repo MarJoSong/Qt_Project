@@ -17,4 +17,7 @@
 ![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/fileSystemModelRunning.png)
 
 <h1>StringListModel</h1>
-![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/StringListModel.jpg)
+![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/StringListModel.png)
+
+<h1>StandardItemModel</h1>
+![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/StandardItemModel.png)
