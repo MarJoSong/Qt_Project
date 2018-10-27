@@ -1,5 +1,5 @@
 <h1>String</h1>
-![Alt text](https://github.com/MarJoSong/Qt_Project/blob/master/string.png)
+![Alt text](/IMAGE/String.png)
 
 <h1>SliderScorll</h1>
 ![Alt text](https://github.com/MarJoSong/Qt_Project/blob/master/sliderScorll.png)
