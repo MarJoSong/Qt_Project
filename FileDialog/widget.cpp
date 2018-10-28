@@ -6,6 +6,7 @@
 #include <QFontDialog>
 #include <QLineEdit>
 #include <QInputDialog>
+#include <QMessageBox>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -149,4 +150,54 @@ void Widget::on_btnInputItem_clicked()
 void Widget::on_btnClear_clicked()
 {
     ui->plainTextEdit->clear();
+}
+
+void Widget::on_btnMsgInformation_clicked()
+{
+    QString dlgTitle = "Information消息框";
+    QString strInfo = "字体大小已设置";
+    QMessageBox::information(this, dlgTitle, strInfo, QMessageBox::Ok,
+                             QMessageBox::NoButton);
+}
+
+void Widget::on_btnMsgWarning_clicked()
+{
+    QString dlgTitle = "Warning消息框";
+    QString strInfo = "文件内容被修改";
+    QMessageBox::warning(this, dlgTitle, strInfo);
+}
+
+void Widget::on_btnMsgCritical_clicked()
+{
+    QString dlgTitle = "Critical消息框";
+    QString strInfo = "不明用户入侵";
+    QMessageBox::critical(this, dlgTitle, strInfo, QMessageBox::Ok,
+                             QMessageBox::NoButton);
+}
+
+void Widget::on_btnMsgAbout_clicked()
+{
+    QString dlgTitle = "About消息框";
+    QString strInfo = "Qt Demo v1.0 \n侵权必究";
+    QMessageBox::about(this, dlgTitle, strInfo);
+}
+
+void Widget::on_btnMsgQuestion_clicked()
+{
+    QString dlgTitle = "Question消息框";
+    QString strInfo = "病毒已清除，是否保存? ";
+    QMessageBox::StandardButton defaultBtn = QMessageBox::NoButton;
+    QMessageBox::StandardButton result;
+    result = QMessageBox::question(this, dlgTitle, strInfo,
+            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, defaultBtn);
+    if(result == QMessageBox::Yes)
+        ui->plainTextEdit->appendPlainText("Yes");
+    else if(result == QMessageBox::No)
+        ui->plainTextEdit->appendPlainText("NO");
+    else if(result == QMessageBox::Cancel)
+        ui->plainTextEdit->appendPlainText("Cancel");
+    else
+        ui->plainTextEdit->appendPlainText("无选择");
+
+
 }

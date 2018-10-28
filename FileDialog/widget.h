@@ -38,6 +38,16 @@ private slots:
 
     void on_btnClear_clicked();
 
+    void on_btnMsgInformation_clicked();
+
+    void on_btnMsgWarning_clicked();
+
+    void on_btnMsgCritical_clicked();
+
+    void on_btnMsgAbout_clicked();
+
+    void on_btnMsgQuestion_clicked();
+
 private:
     Ui::Widget *ui;
 };
