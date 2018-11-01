@@ -68,6 +68,18 @@
     <string>设置表头标题</string>
    </property>
   </action>
+  <action name="actSetColTle">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/images/516.bmp</normaloff>:/image/images/516.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>设置列标题</string>
+   </property>
+   <property name="toolTip">
+    <string>设置列标题</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

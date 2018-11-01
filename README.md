@@ -24,3 +24,6 @@
 
 <h1>FileDialog</h1>
 ![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/IMAGE/FileDialog.png)
+
+<h1>CustomDialog</h1>
+![Alt text](https://dev.tencent.com/u/marjosong/p/Qt_Project/git/blob/master/IMAGE/customdialog.png)

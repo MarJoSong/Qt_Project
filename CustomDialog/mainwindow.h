@@ -23,6 +23,8 @@ private slots:
 
     void on_actSetHeader_triggered();
 
+    void on_actSetColTle_triggered();
+
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *theModel;

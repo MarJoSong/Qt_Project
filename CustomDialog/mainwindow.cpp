@@ -53,3 +53,8 @@ void MainWindow::on_actSetHeader_triggered()
         theModel->setHorizontalHeaderLabels(strList);
     }
 }
+
+void MainWindow::on_actSetColTle_triggered()
+{
+
+}
