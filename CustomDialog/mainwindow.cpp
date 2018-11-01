@@ -32,3 +32,24 @@ void MainWindow::on_actSetSize_triggered()
     }
     delete dlgTableSize;
 }
+
+void MainWindow::on_actSetHeader_triggered()
+{
+    if(dlgSetHeaders == NULL)
+        dlgSetHeaders = new QWDialogHeaders(this);
+    if(dlgSetHeaders->headerList().count() != theModel->columnCount())
+    {
+        QStringList strList;
+        for(int i=0; i<theModel->columnCount(); i++)
+            strList.append(theModel->headerData(i, Qt::Horizontal,
+                Qt::DisplayRole).toString());
+        dlgSetHeaders->setHeaderList(strList);
+    }
+
+    int ret = dlgSetHeaders->exec();
+    if(ret == QDialog::Accepted)
+    {
+        QStringList strList = dlgSetHeaders->headerList();
+        theModel->setHorizontalHeaderLabels(strList);
+    }
+}

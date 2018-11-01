@@ -26,15 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    qwdialogsize.cpp
+    qwdialogsize.cpp \
+    qwdialogheaders.cpp
 
 HEADERS += \
         mainwindow.h \
-    qwdialogsize.h
+    qwdialogsize.h \
+    qwdialogheaders.h
 
 FORMS += \
         mainwindow.ui \
-    qwdialogsize.ui
+    qwdialogsize.ui \
+    qwdialogheaders.ui
 
 RESOURCES += \
     res.qrc
