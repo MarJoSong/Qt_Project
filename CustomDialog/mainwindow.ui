@@ -42,6 +42,7 @@
    </attribute>
    <addaction name="actSetSize"/>
    <addaction name="actSetHeader"/>
+   <addaction name="actLocate"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actSetSize">
@@ -68,16 +69,16 @@
     <string>设置表头标题</string>
    </property>
   </action>
-  <action name="actSetColTle">
+  <action name="actLocate">
    <property name="icon">
     <iconset resource="res.qrc">
-     <normaloff>:/image/images/516.bmp</normaloff>:/image/images/516.bmp</iconset>
+     <normaloff>:/image/images/304.bmp</normaloff>:/image/images/304.bmp</iconset>
    </property>
    <property name="text">
-    <string>设置列标题</string>
+    <string>单元格定位</string>
    </property>
    <property name="toolTip">
-    <string>设置列标题</string>
+    <string>单元格定位</string>
    </property>
   </action>
  </widget>
