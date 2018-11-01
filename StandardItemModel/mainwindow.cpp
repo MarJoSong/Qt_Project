@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QTextStream>
+#include "readfilecontent.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,19 +11,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setCentralWidget(ui->splitter);
 
-    model =new QStandardItemModel(2, FixedColumnCount, this);//创建数据模型
+    model = new QStandardItemModel(2, FixedColumnCount, this);//创建数据模型
     selection = new QItemSelectionModel(model);//创建数据选择模型,需要传递数据模型做参数
     connect(selection, SIGNAL(currentChanged(QModelIndex,QModelIndex)),
             this, SLOT(on_currentChanged(QModelIndex,QModelIndex)));
+
     ui->tableView->setModel(model);//设置数据模型
     ui->tableView->setSelectionModel(selection);//设置选择模型
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectItems);
-    labCurFile = new QLabel("当前文件",this);
-//    labCurFile->setMinimumWidth(180);
-    labCurPos = new QLabel("当前单元格",this);
-//    labCurPos->setMinimumWidth(150);
-    labCurText = new QLabel("单元格内容",this);
-//    labCurText->setMinimumWidth(180);
+    ui->tableView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+
+    labCurFile = new QLabel("当前文件",this);//    labCurFile->setMinimumWidth(180);
+    labCurPos = new QLabel("当前单元格",this);//    labCurPos->setMinimumWidth(150);
+    labCurText = new QLabel("单元格内容",this);//    labCurText->setMinimumWidth(180);
+
     ui->statusBar->addWidget(labCurFile,1);
     ui->statusBar->addWidget(labCurPos,1);
     ui->statusBar->addWidget(labCurText,1);
@@ -35,11 +37,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::iniModelFromStringList(QStringList &aFileContent)
 {
-    int rowCount = aFileContent.count();
-    model->setRowCount(rowCount - 1);
-    QString header = aFileContent.at(0);
+    int rowCount = aFileContent.count();    //文本行数
+
+    model->setRowCount(rowCount - 1);   //设置数据模型行数
+
+    QString header = aFileContent.at(0);    //获取首行内容
+
+    // '\\s'表示空格，回车，换行等空白符，'+'表示多个;
     QStringList headerList = header.split(QRegExp("\\s+"),QString::SkipEmptyParts);
-    model->setHorizontalHeaderLabels(headerList);
+
+    model->setHorizontalHeaderLabels(headerList);   //设置行表头
+    model->setVerticalHeaderLabels(headerList);
 
     QStandardItem *aItem;
     QStringList tmpList;
@@ -68,9 +76,11 @@ void MainWindow::on_currentChanged(const QModelIndex &current, const QModelIndex
     Q_UNUSED(previous)
     if(current.isValid())
     {
-        labCurPos->setText(QString::asprintf("当前单元格: %d行, %d列",current.row(),current.column()));
+        labCurPos->setText(QString::asprintf("当前单元格: %d行, %d列",current.row(),current.column()));//从0起
+
         QStandardItem *aItem = model->itemFromIndex(current);
-        this->labCurText->setText("单元格内容: " + aItem->text());
+        this->labCurText->setText("单元格内容: " + aItem->text());//提取并设置内容
+
         QFont font  = aItem->font();
         ui->actFontBold->setChecked(font.bold());
     }
@@ -83,25 +93,20 @@ void MainWindow::on_actOpen_triggered()
     QString curPath = QCoreApplication::applicationDirPath();
     QString aFileName = QFileDialog::getOpenFileName(this, "打开一个文件",
             curPath, "井数据文件(*.txt);;所有文件(*.*)");
-    if(aFileName.isEmpty())
+
+    if(aFileName.isEmpty())         //判断文件名读取结果
         return;
 
-    QStringList fFileContent;
-    QFile aFile(aFileName);
-    if(aFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        QTextStream aStream(&aFile);
-        ui->plainTextEdit->clear();
-        while(!aStream.atEnd())
-        {
-            QString str = aStream.readLine();
-            ui->plainTextEdit->appendPlainText(str);
-            fFileContent.append(str);
-        }
-        aFile.close();
-        this->labCurFile->setText("当前文件: " + aFileName);
-        iniModelFromStringList(fFileContent);
-    }
+    QStringList fFileContent = readFileContent(aFileName);  //返回文件内容
+
+    //逐行打印文件内容
+    ui->plainTextEdit->clear();
+    for(int i=0; i<fFileContent.count(); i++)
+            ui->plainTextEdit->appendPlainText(fFileContent.at(i));
+
+
+    this->labCurFile->setText("当前文件: " + aFileName);
+    iniModelFromStringList(fFileContent);
 
 }
 

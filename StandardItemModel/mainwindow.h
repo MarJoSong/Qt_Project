@@ -21,9 +21,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QLabel *labCurFile;
-    QLabel *labCurPos;
-    QLabel *labCurText;
+    QLabel *labCurFile;     //当前文件
+    QLabel *labCurPos;      //当前单元格行列号
+    QLabel *labCurText;     //当前单元格内容
     QStandardItemModel *model;
     QItemSelectionModel *selection;
     void iniModelFromStringList(QStringList&);
@@ -40,6 +40,7 @@ private slots:
     void on_actFontBold_triggered(bool checked);
     void on_actSave_triggered();
     void on_actiShow_triggered();
+    void on_actFontBold_triggered();
 };
 
 #endif // MAINWINDOW_H

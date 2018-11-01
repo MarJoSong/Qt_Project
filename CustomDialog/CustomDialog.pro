@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-10-24T18:14:08
+# Project created by QtCreator 2018-10-30T20:12:07
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = StandardItemModel
+TARGET = CustomDialog
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,14 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    readfilecontent.cpp
+    qwdialogsize.cpp
 
 HEADERS += \
         mainwindow.h \
-    readfilecontent.h
+    qwdialogsize.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    qwdialogsize.ui
 
 RESOURCES += \
     res.qrc
