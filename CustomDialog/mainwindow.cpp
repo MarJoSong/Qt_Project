@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "qwdialogsize.h"
 #include <QCloseEvent>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -81,20 +80,32 @@ void MainWindow::on_actLocate_triggered()
     dlgLocate = new QWDialogLocate(this);
     dlgLocate->setAttribute(Qt::WA_DeleteOnClose);
     Qt::WindowFlags flags = dlgLocate->windowFlags();
-    dlgLocate->setWindowFlags(flags | Qt::WindowStaysOnTopHint);
+    //dlgLocate->setWindowFlags(flags | Qt::WindowStaysOnTopHint);
+    dlgLocate->setWindowState(Qt::WindowFullScreen);
+    dlgLocate->setWindowOpacity(0.0);
 
-    //dlgLocate->setSpinRange(theModel->rowCount(), theModel->columnCount());
+    dlgLocate->setSpinRange(theModel->rowCount(), theModel->columnCount());
     QModelIndex curIndex = theSelection->currentIndex();
 
     if(curIndex.isValid())
         dlgLocate->setSpinValue(curIndex.row(), curIndex.column());
+
+    connect(dlgLocate, SIGNAL(changeCellText(int,int,QString&)),
+            this, SLOT(setACellText(int,int,QString)));
+    connect(dlgLocate, SIGNAL(changeActionEnable(bool)),
+            this, SLOT(setActLocateEnable(bool)));
+    connect(this, SIGNAL(cellIndexChange(int,int)),
+            dlgLocate, SLOT(setSpinValue(int,int)));
+
     dlgLocate->show();
 }
 
 void MainWindow::on_tableView_clicked(const QModelIndex &index)
 {
-    if(dlgLocate!=NULL)
-        dlgLocate->setSpinValue(index.row(), index.column());
+//    if(dlgLocate!=NULL)
+//        dlgLocate->setSpinValue(index.row(), index.column());
+    emit cellIndexChange(index.row(), index.column());
+
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)

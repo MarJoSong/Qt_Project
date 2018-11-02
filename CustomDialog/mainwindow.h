@@ -6,6 +6,7 @@
 #include <QStringListModel>
 #include <qwdialogheaders.h>
 #include <qwdialoglocate.h>
+#include <qwdialogsize.h>
 #include <QItemSelectionModel>
 #include <QMessageBox>
 #include <QCloseEvent>
@@ -22,6 +23,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+public slots:
     void setACellText(int row, int column, QString text);
 
     void setActLocateEnable(bool enable);
@@ -37,6 +39,7 @@ private slots:
 
     void on_tableView_clicked(const QModelIndex &index);
 
+
 private:
     Ui::MainWindow *ui;
 
@@ -46,6 +49,9 @@ private:
     QWDialogLocate  *dlgLocate = NULL;
 
     void closeEvent(QCloseEvent *event);
+
+signals:
+    void cellIndexChange(int rowNo, int colSNo);
 
 };
 
