@@ -27,17 +27,26 @@ SOURCES += \
         main.cpp \
         qwmainwindow.cpp \
     qformdoc.cpp \
-    qformtable.cpp
+    qformtable.cpp \
+    qwdialogsize.cpp \
+    qwdialogheader.cpp \
+    qwdialoglocate.cpp
 
 HEADERS += \
         qwmainwindow.h \
     qformdoc.h \
-    qformtable.h
+    qformtable.h \
+    qwdialogsize.h \
+    qwdialogheader.h \
+    qwdialoglocate.h
 
 FORMS += \
         qwmainwindow.ui \
     qformdoc.ui \
-    qformtable.ui
+    qformtable.ui \
+    qwdialogsize.ui \
+    qwdialogheader.ui \
+    qwdialoglocate.ui
 
 RESOURCES += \
     res.qrc

@@ -33,5 +33,5 @@ QFormDoc::QFormDoc(QWidget *parent) :
 QFormDoc::~QFormDoc()
 {
     delete ui;
-    QMessageBox::information(this, "消息", "QFormDoc对象被删除和释放");
+    //QMessageBox::information(this, "消息", "QFormDoc对象被删除和释放");
 }

@@ -17,6 +17,12 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Tab 1</string>
@@ -55,11 +61,10 @@
    <addaction name="actWidget"/>
    <addaction name="separator"/>
    <addaction name="actWindowInsite"/>
-   <addaction name="action_MainWindow_2"/>
+   <addaction name="actWindow"/>
    <addaction name="separator"/>
    <addaction name="action"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actWidgetInsite">
    <property name="icon">
     <iconset resource="res.qrc">
@@ -93,7 +98,7 @@
     <string>嵌入式MainWindow</string>
    </property>
   </action>
-  <action name="action_MainWindow_2">
+  <action name="actWindow">
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/images/images/3.ico</normaloff>:/images/images/3.ico</iconset>
@@ -122,5 +127,22 @@
  <resources>
   <include location="res.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>action</sender>
+   <signal>triggered()</signal>
+   <receiver>QWMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
