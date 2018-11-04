@@ -14,7 +14,7 @@ QWMainWindow::QWMainWindow(QWidget *parent) :
     ui->tabWidget->clear();
     ui->tabWidget->setTabsClosable(true);
     this->setCentralWidget(ui->tabWidget);
-    this->setWindowState(Qt::WindowNoState);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 QWMainWindow::~QWMainWindow()
