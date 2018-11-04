@@ -37,3 +37,7 @@
 <h1>CustomDialog</h1>
 
 ![](img/customdialog.png)
+
+<h1>MutliWindowDesign</h1>
+
+![](img/MutliWindowDesign.png)

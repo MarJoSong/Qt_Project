@@ -40,10 +40,12 @@ void QWDialogLocate::on_btnText_clicked()
 
 void QWDialogLocate::closeEvent(QCloseEvent *event)
 {
+    Q_UNUSED(event);
     emit actLocateEnable(true);
 }
 
 void QWDialogLocate::showEvent(QShowEvent *event)
 {
+    Q_UNUSED(event);
     emit actLocateEnable(false);
 }

@@ -14,7 +14,7 @@ QWMainWindow::QWMainWindow(QWidget *parent) :
     ui->tabWidget->clear();
     ui->tabWidget->setTabsClosable(true);
     this->setCentralWidget(ui->tabWidget);
-    this->setWindowState(Qt::WindowFullScreen);
+    this->setWindowState(Qt::WindowNoState);
 }
 
 QWMainWindow::~QWMainWindow()
@@ -80,6 +80,7 @@ void QWMainWindow::on_tabWidget_tabCloseRequested(int index)
 
 void QWMainWindow::on_tabWidget_currentChanged(int index)
 {
+    Q_UNUSED(index);
     bool en = ui->tabWidget->count()>0;
     ui->tabWidget->setVisible(en);
 }
