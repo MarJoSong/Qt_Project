@@ -27,15 +27,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         qformdoc.cpp \
-    qwmainwindow.cpp
+    qwmainwindow.cpp \
+    qdialoglogin.cpp
 
 HEADERS += \
         qformdoc.h \
-    qwmainwindow.h
+    qwmainwindow.h \
+    qdialoglogin.h
 
 FORMS += \
         qformdoc.ui \
-    qwmainwindow.ui
+    qwmainwindow.ui \
+    qdialoglogin.ui
 
 RESOURCES += \
     res.qrc
