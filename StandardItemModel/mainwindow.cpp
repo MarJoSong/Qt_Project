@@ -21,6 +21,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectItems);
     ui->tableView->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
+    ui->tableView->setItemDelegateForColumn(0, &intSpinDelegate);
+    ui->tableView->setItemDelegateForColumn(1, &doubleSpinDelegate);
+    ui->tableView->setItemDelegateForColumn(2, &doubleSpinDelegate);
+    ui->tableView->setItemDelegateForColumn(3, &doubleSpinDelegate);
+    ui->tableView->setItemDelegateForColumn(4, &comboBoxDelegate);
+
     labCurFile = new QLabel("当前文件",this);//    labCurFile->setMinimumWidth(180);
     labCurPos = new QLabel("当前单元格",this);//    labCurPos->setMinimumWidth(150);
     labCurText = new QLabel("单元格内容",this);//    labCurText->setMinimumWidth(180);

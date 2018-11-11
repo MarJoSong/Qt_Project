@@ -5,6 +5,9 @@
 #include <QLabel>
 #include <QStandardItemModel>
 #include <QItemSelectionModel>
+#include "qwintspindelegate.h"
+#include "qwfloatspindelegate.h"
+#include "qwcomboboxdelegate.h"
 
 #define FixedColumnCount 6
 
@@ -28,6 +31,10 @@ private:
     QItemSelectionModel *selection;
     void iniModelFromStringList(QStringList&);
 
+    QWIntSpinDelegate intSpinDelegate;
+    QWFloatSpinDelegate doubleSpinDelegate;
+    QWComboBoxDelegate comboBoxDelegate;
+
 private slots:
     void on_currentChanged(const QModelIndex &current, const QModelIndex &previous);
     void on_actOpen_triggered();
@@ -40,7 +47,6 @@ private slots:
     void on_actFontBold_triggered(bool checked);
     void on_actSave_triggered();
     void on_actiShow_triggered();
-    void on_actFontBold_triggered();
 };
 
 #endif // MAINWINDOW_H
