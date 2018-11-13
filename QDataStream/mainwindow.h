@@ -8,6 +8,9 @@
 #include <QStandardItemModel>
 #include <QItemSelectionModel>
 #include <QLabel>
+#include "qwdialogheaders.h"
+
+#define     FixedColumnCount    6
 
 namespace Ui {
 class MainWindow;
@@ -25,7 +28,8 @@ private:
     QWComboBoxDelegate comboBoxDetegate;
     QStandardItemModel* theModel;
     QItemSelectionModel* theSelection;
-    void resetTable(int aRowCount);
+    QWDialogHeaders* dlgSetHeader = NULL;
+
     bool saveDataAsStream(QString& aFileName);
     bool openDataAsStream(QString& aFileName);
     bool saveBinaryFile(QString& aFileName);
@@ -37,6 +41,16 @@ public:
 
 private slots:
     void on_actSave_triggered();
+
+    void on_actOpen_triggered();
+
+    void on_currentChanged(const QModelIndex& current, const QModelIndex& previous);
+
+    void on_actNew_triggered();
+
+    void on_actSetSize_triggered();
+
+    void on_actSetHeader_triggered();
 
 private:
     Ui::MainWindow *ui;

@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-11-11T22:09:29
+# Project created by QtCreator 2018-11-13T17:53:50
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QDataStream
+TARGET = QFile
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,25 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
-    qwcomboboxdelegate.cpp \
-    qwfloatspindelegate.cpp \
-    qwintspindelegate.cpp \
-    qwdialogheaders.cpp \
-    qwdialogsize.cpp
+        widget.cpp
 
 HEADERS += \
-        mainwindow.h \
-    qwcomboboxdelegate.h \
-    qwfloatspindelegate.h \
-    qwintspindelegate.h \
-    qwdialogheaders.h \
-    qwdialogsize.h
+        widget.h
 
 FORMS += \
-        mainwindow.ui \
-    qwdialogheaders.ui \
-    qwdialogsize.ui
+        widget.ui
 
 RESOURCES += \
     res.qrc

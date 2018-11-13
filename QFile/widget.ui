@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>623</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>目录和文件操作</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,3">
+   <item>
+    <widget class="QToolBox" name="toolBox">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>240</width>
+        <height>217</height>
+       </rect>
+      </property>
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/802.bmp</normaloff>:/images/images/802.bmp</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QCoreApplication类</string>
+      </attribute>
+      <widget class="QPushButton" name="applicationDirPath">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Returns the file path of the application executable.</string>
+       </property>
+       <property name="text">
+        <string>applicationDirPath</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="applicationFilePath">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Returns the directory that contains the application executable.</string>
+       </property>
+       <property name="text">
+        <string>applicationFilePath</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="applicationName">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>This property holds the name of this application</string>
+       </property>
+       <property name="text">
+        <string>applicationName</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="setOrganizationName">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>This property holds the name of the organization that wrote this application</string>
+       </property>
+       <property name="text">
+        <string>setOrganizationName</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="organizationName">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>This property holds the name of the organization that wrote this application</string>
+       </property>
+       <property name="text">
+        <string>organizationName</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="exit">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>221</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Returns the base name of the file without the path.</string>
+       </property>
+       <property name="text">
+        <string>exit</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>240</width>
+        <height>217</height>
+       </rect>
+      </property>
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/804.bmp</normaloff>:/images/images/804.bmp</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QFile类</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/135.JPG</normaloff>:/images/images/135.JPG</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QFileInfo类</string>
+      </attribute>
+      <widget class="QPushButton" name="baseName">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>110</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Returns the base name of the file without the path.</string>
+       </property>
+       <property name="text">
+        <string>baseName()</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/007.GIF</normaloff>:/images/images/007.GIF</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QDir类</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/806.bmp</normaloff>:/images/images/806.bmp</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QTemporary和QTemporaryFile</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <attribute name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/images/images/714.bmp</normaloff>:/images/images/714.bmp</iconset>
+      </attribute>
+      <attribute name="label">
+       <string>QFileSystemWatcher类</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,5">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="openFile">
+           <property name="text">
+            <string>打开文件</string>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/images/images/007.GIF</normaloff>:/images/images/007.GIF</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="openDir">
+           <property name="text">
+            <string>打开目录</string>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/images/images/122.bmp</normaloff>:/images/images/122.bmp</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearInfo">
+           <property name="text">
+            <string>清楚文本框</string>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/images/images/122.bmp</normaloff>:/images/images/122.bmp</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="file">
+           <property name="text">
+            <string>文  件</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="fileEdit"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="dir">
+           <property name="text">
+            <string>目  录</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="dirEdit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>信  息</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
