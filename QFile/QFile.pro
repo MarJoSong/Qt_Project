@@ -25,13 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        widget.cpp \
+    qwdialogfilename.cpp
 
 HEADERS += \
-        widget.h
+        widget.h \
+    qwdialogfilename.h
 
 FORMS += \
-        widget.ui
+        widget.ui \
+    qwdialogfilename.ui
 
 RESOURCES += \
     res.qrc
