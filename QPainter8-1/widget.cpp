@@ -4,6 +4,7 @@
 #include <QRect>
 #include <QPen>
 #include <QBrush>
+#include <QTime>
 
 void Widget::paintEvent(QPaintEvent *event)
 {
@@ -13,8 +14,8 @@ void Widget::paintEvent(QPaintEvent *event)
     int H = this->height();
 
     QRadialGradient radiaGrad(W/2, H/2, qMax(W/8, H/8), W/2, H/2);
-    radiaGrad.setColorAt(0, Qt::green);
-    radiaGrad.setColorAt(1, Qt::blue);
+    radiaGrad.setColorAt(1, Qt::white);
+    radiaGrad.setColorAt(0, Qt::black);
     radiaGrad.setSpread(QGradient::RepeatSpread);
     painter.setBrush(radiaGrad);
 
@@ -34,4 +35,48 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::sleep(unsigned int msec)
+{
+    QTime reachTime = QTime::currentTime().addMSecs(msec);
+    while(QTime::currentTime() < reachTime){}
+}
+
+void Widget::paintWhiteBlack()
+{
+    QPainter painter(this);
+    int W = this->width();
+    int H = this->height();
+
+    QRadialGradient radiaGrad(W/2, H/2, qMax(W/8, H/8), W/2, H/2);
+    radiaGrad.setColorAt(0, Qt::white);
+    radiaGrad.setColorAt(1, Qt::black);
+    radiaGrad.setSpread(QGradient::RepeatSpread);
+    painter.setBrush(radiaGrad);
+
+    painter.drawRect(this->rect());
+}
+
+void Widget::paintBlackWhite()
+{
+    QPainter painter(this);
+    int W = this->width();
+    int H = this->height();
+
+    QRadialGradient radiaGrad(W/2, H/2, qMax(W/8, H/8), W/2, H/2);
+    radiaGrad.setColorAt(1, Qt::white);
+    radiaGrad.setColorAt(0, Qt::black);
+    radiaGrad.setSpread(QGradient::RepeatSpread);
+    painter.setBrush(radiaGrad);
+
+    painter.drawRect(this->rect());
+}
+
+void Widget::on_pushButton_2_clicked()
+{
+    sleep(1000);
+    paintBlackWhite();
+    sleep(1000);
+    paintWhiteBlack();
 }
