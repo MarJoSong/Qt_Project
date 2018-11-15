@@ -6,6 +6,7 @@
 #include "qwdialogfilename.h"
 #include <QFileInfo>
 #include <QDateTime>
+#include <QDir>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -364,4 +365,91 @@ void Widget::on_pushButton_8_clicked()
         return;
     }
     ui->plainTextEdit->appendPlainText(fileInfo.fileName()+"不存在\n");
+}
+
+void Widget::on_tempPath_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText(QDir::tempPath()+"\n");
+}
+
+void Widget::on_rootPath_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText(QDir::rootPath()+"\n");
+}
+
+void Widget::on_homePath_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText(QDir::homePath()+"\n");
+}
+
+void Widget::on_currentPath_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText(QDir::currentPath()+"\n");
+}
+
+void Widget::on_setCurrentPath_clicked()
+{
+    showBtnInfo(sender());
+    QDir::setCurrent("D:/");
+    ui->plainTextEdit->appendPlainText("设置D盘为当前路径\n");
+}
+
+void Widget::on_entryList_clicked()
+{
+    showBtnInfo(sender());
+    QDir dir(ui->fileEdit->text());
+    QStringList strList = dir.entryList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot);
+    ui->plainTextEdit->appendPlainText("当前文件夹下所有目录和文件");
+    for(int i=0; i<strList.count(); i++)
+        ui->plainTextEdit->appendPlainText(strList.at(i));
+}
+
+void Widget::on_pushButton_12_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText("监听目录: "+ui->dirEdit->text()+"\n");
+    fileWatcher.addPath(ui->dirEdit->text());
+    fileWatcher.addPath(ui->fileEdit->text());
+    QObject::connect(&fileWatcher, &QFileSystemWatcher::directoryChanged,
+                     this, &Widget::on_directoryChanged);
+    QObject::connect(&fileWatcher, &QFileSystemWatcher::fileChanged,
+                     this, &Widget::on_fileChanged);
+}
+
+void Widget::on_directoryChanged(const QString path)
+{
+    ui->plainTextEdit->appendPlainText(path);
+    ui->plainTextEdit->appendPlainText("目录发生了变化\n");
+}
+
+void Widget::on_pushButton_13_clicked()
+{
+    showBtnInfo(sender());
+    ui->plainTextEdit->appendPlainText("停止监听: "+ui->dirEdit->text()+"\n");
+    fileWatcher.removePath(ui->dirEdit->text());
+    fileWatcher.removePath(ui->fileEdit->text());
+    QObject::disconnect(&fileWatcher, &QFileSystemWatcher::directoryChanged,
+                     this, &Widget::on_directoryChanged);
+    QObject::disconnect(&fileWatcher, &QFileSystemWatcher::fileChanged,
+                     this, &Widget::on_fileChanged);
+}
+
+void Widget::on_fileChanged(const QString path)
+{
+    ui->plainTextEdit->appendPlainText(path);
+    ui->plainTextEdit->appendPlainText("文件发生了变化\n");
+}
+
+void Widget::on_openDir_clicked()
+{
+    QString curPath = QDir::currentPath();
+    QString aFileName = QFileDialog::getExistingDirectory(this, "打开一个目录", curPath);
+    if(aFileName.isEmpty())
+        return;
+    ui->dirEdit->setText(aFileName);
+    QMessageBox::information(this, "提示", "目录已打开");
 }

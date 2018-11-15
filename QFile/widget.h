@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QFile>
+#include <QFileSystemWatcher>
 
 namespace Ui {
 class Widget;
@@ -85,8 +86,31 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_tempPath_clicked();
+
+    void on_rootPath_clicked();
+
+    void on_homePath_clicked();
+
+    void on_currentPath_clicked();
+
+    void on_setCurrentPath_clicked();
+
+    void on_entryList_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_directoryChanged(const QString path);
+
+    void on_pushButton_13_clicked();
+
+    void on_fileChanged(const QString path);
+    void on_openDir_clicked();
+
 private:
     Ui::Widget *ui;
+
+    QFileSystemWatcher fileWatcher;
 };
 
 #endif // WIDGET_H

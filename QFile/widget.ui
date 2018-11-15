@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>623</width>
-    <height>415</height>
+    <width>708</width>
+    <height>605</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>目录和文件操作</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_4" columnstretch="2,0">
+  <layout class="QGridLayout" name="gridLayout_4" columnstretch="2,3">
    <item row="0" column="1">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -120,15 +120,15 @@
    <item row="0" column="0">
     <widget class="QToolBox" name="toolBox">
      <property name="currentIndex">
-      <number>1</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>274</width>
+        <height>407</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -138,89 +138,85 @@
       <attribute name="label">
        <string>QCoreApplication类</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_8">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>-3</y>
-         <width>251</width>
-         <height>211</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string/>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QPushButton" name="applicationDirPath">
-          <property name="toolTip">
-           <string>Returns the file path of the application executable.</string>
-          </property>
-          <property name="text">
-           <string>applicationDirPath</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="applicationFilePath">
-          <property name="toolTip">
-           <string>Returns the directory that contains the application executable.</string>
-          </property>
-          <property name="text">
-           <string>applicationFilePath</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="applicationName">
-          <property name="toolTip">
-           <string>This property holds the name of this application</string>
-          </property>
-          <property name="text">
-           <string>applicationName</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="setOrganizationName">
-          <property name="toolTip">
-           <string>This property holds the name of the organization that wrote this application</string>
-          </property>
-          <property name="text">
-           <string>setOrganizationName</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="organizationName">
-          <property name="toolTip">
-           <string>This property holds the name of the organization that wrote this application</string>
-          </property>
-          <property name="text">
-           <string>organizationName</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="exit">
-          <property name="toolTip">
-           <string>Returns the base name of the file without the path.</string>
-          </property>
-          <property name="text">
-           <string>exit</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="applicationDirPath">
+            <property name="toolTip">
+             <string>Returns the file path of the application executable.</string>
+            </property>
+            <property name="text">
+             <string>applicationDirPath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="applicationFilePath">
+            <property name="toolTip">
+             <string>Returns the directory that contains the application executable.</string>
+            </property>
+            <property name="text">
+             <string>applicationFilePath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="applicationName">
+            <property name="toolTip">
+             <string>This property holds the name of this application</string>
+            </property>
+            <property name="text">
+             <string>applicationName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="setOrganizationName">
+            <property name="toolTip">
+             <string>This property holds the name of the organization that wrote this application</string>
+            </property>
+            <property name="text">
+             <string>setOrganizationName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="organizationName">
+            <property name="toolTip">
+             <string>This property holds the name of the organization that wrote this application</string>
+            </property>
+            <property name="text">
+             <string>organizationName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exit">
+            <property name="toolTip">
+             <string>Returns the base name of the file without the path.</string>
+            </property>
+            <property name="text">
+             <string>exit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="page_2">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>274</width>
+        <height>407</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -230,119 +226,109 @@
       <attribute name="label">
        <string>QFile类</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_5">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>251</width>
-         <height>81</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string>静态函数</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QPushButton" name="Copy">
-          <property name="text">
-           <string>Copy</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="Rename">
-          <property name="text">
-           <string>Rename</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="Remove">
-          <property name="text">
-           <string>Remove</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="Exist">
-          <property name="text">
-           <string>Exist</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QGroupBox" name="groupBox_6">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>90</y>
-         <width>251</width>
-         <height>113</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string>成员函数</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="1" column="0">
-         <widget class="QPushButton" name="fileRemove">
-          <property name="toolTip">
-           <string>删除文件</string>
-          </property>
-          <property name="text">
-           <string>Remove</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="fileCopy">
-          <property name="text">
-           <string>Copy</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="fileRename">
-          <property name="toolTip">
-           <string>成员函数重命名</string>
-          </property>
-          <property name="text">
-           <string>Rename</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="fileExist">
-          <property name="toolTip">
-           <string>检查文件是否存在</string>
-          </property>
-          <property name="text">
-           <string>Exist</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="size">
-          <property name="toolTip">
-           <string>返回文件大小，字节</string>
-          </property>
-          <property name="text">
-           <string>size</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string>静态函数</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="Copy">
+            <property name="text">
+             <string>Copy</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="Rename">
+            <property name="text">
+             <string>Rename</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="Remove">
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="Exist">
+            <property name="text">
+             <string>Exist</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string>成员函数</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="fileRemove">
+            <property name="toolTip">
+             <string>删除文件</string>
+            </property>
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="fileCopy">
+            <property name="text">
+             <string>Copy</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="fileRename">
+            <property name="toolTip">
+             <string>成员函数重命名</string>
+            </property>
+            <property name="text">
+             <string>Rename</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="fileExist">
+            <property name="toolTip">
+             <string>检查文件是否存在</string>
+            </property>
+            <property name="text">
+             <string>Exist</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="size">
+            <property name="toolTip">
+             <string>返回文件大小，字节</string>
+            </property>
+            <property name="text">
+             <string>size</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="page_3">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>274</width>
+        <height>407</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -352,189 +338,185 @@
       <attribute name="label">
        <string>QFileInfo类</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_7">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>251</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <property name="title">
-        <string/>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="4" column="0" colspan="2">
-         <widget class="QPushButton" name="baseName_2">
-          <property name="toolTip">
-           <string>返回带文件名绝对路径</string>
-          </property>
-          <property name="text">
-           <string>absoluteFilePath</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="setFile">
-          <property name="toolTip">
-           <string>设置文件信息名</string>
-          </property>
-          <property name="text">
-           <string>setFile</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="filePath">
-          <property name="toolTip">
-           <string>返回包含路径文件名</string>
-          </property>
-          <property name="text">
-           <string>filePath</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="1">
-         <widget class="QPushButton" name="pushButton">
-          <property name="toolTip">
-           <string>判断是否为可执行文件</string>
-          </property>
-          <property name="text">
-           <string>isExecute</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="1">
-         <widget class="QPushButton" name="isDir">
-          <property name="toolTip">
-           <string>判断是否是文件夹</string>
-          </property>
-          <property name="text">
-           <string>isDir</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="0">
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="toolTip">
-           <string>判断是否是文件</string>
-          </property>
-          <property name="text">
-           <string>isFile</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="0">
-         <widget class="QPushButton" name="suffix">
-          <property name="toolTip">
-           <string>返回后缀</string>
-          </property>
-          <property name="text">
-           <string>suffix</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="1">
-         <widget class="QPushButton" name="pushButton_6">
-          <property name="toolTip">
-           <string>返回上一次修改时间</string>
-          </property>
-          <property name="text">
-           <string>lastModified</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="0">
-         <widget class="QPushButton" name="createdTime">
-          <property name="toolTip">
-           <string>返回文件建立时间</string>
-          </property>
-          <property name="text">
-           <string>created</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0" colspan="2">
-         <widget class="QPushButton" name="baseName_5">
-          <property name="toolTip">
-           <string>返回绝对路径</string>
-          </property>
-          <property name="text">
-           <string>absolutePath</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QPushButton" name="size_2">
-          <property name="toolTip">
-           <string>返回文件大小，单位字节</string>
-          </property>
-          <property name="text">
-           <string>size</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="fileName">
-          <property name="toolTip">
-           <string>返回去除路径文件名</string>
-          </property>
-          <property name="text">
-           <string>fileName</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="Path">
-          <property name="toolTip">
-           <string>返回不含文件名路径</string>
-          </property>
-          <property name="text">
-           <string>Path</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QPushButton" name="baseName">
-          <property name="toolTip">
-           <string>返回去后缀的不带路径的文件名</string>
-          </property>
-          <property name="text">
-           <string>baseName</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="0">
-         <widget class="QPushButton" name="pushButton_7">
-          <property name="toolTip">
-           <string>返回上一次打开时间</string>
-          </property>
-          <property name="text">
-           <string>lastRead</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="1">
-         <widget class="QPushButton" name="pushButton_8">
-          <property name="toolTip">
-           <string>判断文件是否存在</string>
-          </property>
-          <property name="text">
-           <string>exist</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="4" column="0" colspan="2">
+           <widget class="QPushButton" name="baseName_2">
+            <property name="toolTip">
+             <string>返回带文件名绝对路径</string>
+            </property>
+            <property name="text">
+             <string>absoluteFilePath</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="setFile">
+            <property name="toolTip">
+             <string>设置文件信息名</string>
+            </property>
+            <property name="text">
+             <string>setFile</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="filePath">
+            <property name="toolTip">
+             <string>返回包含路径文件名</string>
+            </property>
+            <property name="text">
+             <string>filePath</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QPushButton" name="pushButton">
+            <property name="toolTip">
+             <string>判断是否为可执行文件</string>
+            </property>
+            <property name="text">
+             <string>isExecute</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QPushButton" name="isDir">
+            <property name="toolTip">
+             <string>判断是否是文件夹</string>
+            </property>
+            <property name="text">
+             <string>isDir</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="toolTip">
+             <string>判断是否是文件</string>
+            </property>
+            <property name="text">
+             <string>isFile</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QPushButton" name="suffix">
+            <property name="toolTip">
+             <string>返回后缀</string>
+            </property>
+            <property name="text">
+             <string>suffix</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="toolTip">
+             <string>返回上一次修改时间</string>
+            </property>
+            <property name="text">
+             <string>lastModified</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QPushButton" name="createdTime">
+            <property name="toolTip">
+             <string>返回文件建立时间</string>
+            </property>
+            <property name="text">
+             <string>created</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="baseName_5">
+            <property name="toolTip">
+             <string>返回绝对路径</string>
+            </property>
+            <property name="text">
+             <string>absolutePath</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="size_2">
+            <property name="toolTip">
+             <string>返回文件大小，单位字节</string>
+            </property>
+            <property name="text">
+             <string>size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="fileName">
+            <property name="toolTip">
+             <string>返回去除路径文件名</string>
+            </property>
+            <property name="text">
+             <string>fileName</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="Path">
+            <property name="toolTip">
+             <string>返回不含文件名路径</string>
+            </property>
+            <property name="text">
+             <string>Path</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="baseName">
+            <property name="toolTip">
+             <string>返回去后缀的不带路径的文件名</string>
+            </property>
+            <property name="text">
+             <string>baseName</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="toolTip">
+             <string>返回上一次打开时间</string>
+            </property>
+            <property name="text">
+             <string>lastRead</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="toolTip">
+             <string>判断文件是否存在</string>
+            </property>
+            <property name="text">
+             <string>exist</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="page_4">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>260</width>
+        <height>450</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -544,14 +526,206 @@
       <attribute name="label">
        <string>QDir类</string>
       </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox_9">
+         <property name="title">
+          <string>静态函数</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="tempPath">
+            <property name="toolTip">
+             <string>返回系统临时文件目录路径</string>
+            </property>
+            <property name="text">
+             <string>tempPath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="homePath">
+            <property name="toolTip">
+             <string>返回主目录名称</string>
+            </property>
+            <property name="text">
+             <string>homePath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="currentPath">
+            <property name="toolTip">
+             <string>返回当前目录名称</string>
+            </property>
+            <property name="text">
+             <string>currentPath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="rootPath">
+            <property name="toolTip">
+             <string>返回根目录名称</string>
+            </property>
+            <property name="text">
+             <string>rootPath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="setCurrentPath">
+            <property name="toolTip">
+             <string>设置Path表示目录为当前目录</string>
+            </property>
+            <property name="text">
+             <string>setCurrentPath</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_10">
+         <property name="title">
+          <string>成员函数</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="absoluteFilePath">
+            <property name="toolTip">
+             <string>返回当前目录下一个文件的绝对路径文件名</string>
+            </property>
+            <property name="text">
+             <string>absoluteFilePath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="absolutePath">
+            <property name="toolTip">
+             <string>返回当前目录绝对路径</string>
+            </property>
+            <property name="text">
+             <string>absolutePath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="canonicalPath">
+            <property name="toolTip">
+             <string>返回当前目录标准路径</string>
+            </property>
+            <property name="text">
+             <string>canonicalPath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="filePath_Dir">
+            <property name="toolTip">
+             <string>返回目录下一个文件的目录名</string>
+            </property>
+            <property name="text">
+             <string>filePath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="dirName">
+            <property name="toolTip">
+             <string>返回最后一级目录名称</string>
+            </property>
+            <property name="text">
+             <string>dirName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exist_Dir">
+            <property name="toolTip">
+             <string>判断当前目录是否存在</string>
+            </property>
+            <property name="text">
+             <string>exist</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="entryList">
+            <property name="toolTip">
+             <string>返回目录下所有文件名，子目录名</string>
+            </property>
+            <property name="text">
+             <string>entryList</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="dirName_3">
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>dirName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>mkdir</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>rmdir</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="text">
+             <string>remove</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="text">
+             <string>rename</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="page_5">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>274</width>
+        <height>407</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -567,8 +741,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>261</width>
-        <height>217</height>
+        <width>274</width>
+        <height>407</height>
        </rect>
       </property>
       <attribute name="icon">
@@ -578,6 +752,48 @@
       <attribute name="label">
        <string>QFileSystemWatcher类</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="toolTip">
+          <string>添加一个监听的目录或文件</string>
+         </property>
+         <property name="text">
+          <string>addPath()开始监听</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="toolTip">
+          <string>移除监听的目录或文件</string>
+         </property>
+         <property name="text">
+          <string>removePath()停止监听</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="toolTip">
+          <string>返回监听目录列表</string>
+         </property>
+         <property name="text">
+          <string>directories()</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_15">
+         <property name="toolTip">
+          <string>返回监听文件列表</string>
+         </property>
+         <property name="text">
+          <string>files()</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
