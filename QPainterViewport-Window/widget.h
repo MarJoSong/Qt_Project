@@ -18,13 +18,6 @@ protected:
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-    void paintWhiteBlack();
-    void paintBlackWhite();
-
-private slots:
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
 
 private:
     Ui::Widget *ui;

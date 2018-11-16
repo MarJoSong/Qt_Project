@@ -37,12 +37,6 @@ Widget::~Widget()
     delete ui;
 }
 
-void Widget::sleep(unsigned int msec)
-{
-    QTime reachTime = QTime::currentTime().addMSecs(msec);
-    while(QTime::currentTime() < reachTime){}
-}
-
 void Widget::paintWhiteBlack()
 {
     QPainter painter(this);
@@ -75,8 +69,10 @@ void Widget::paintBlackWhite()
 
 void Widget::on_pushButton_2_clicked()
 {
-    sleep(1000);
     paintBlackWhite();
-    sleep(1000);
+}
+
+void Widget::on_pushButton_3_clicked()
+{
     paintWhiteBlack();
 }
