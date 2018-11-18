@@ -14,7 +14,7 @@ void Widget::paintEvent(QPaintEvent *event)
 
     int side = qMin(W, H);
     QRect rect((W-side)/2, (H-side)/2, side, side);
-    painter.drawRect(rect);
+    //painter.drawRect(rect);
     painter.setViewport(rect);
     painter.setWindow(-100, -100, 200, 200);
     painter.setRenderHint(QPainter::Antialiasing);
