@@ -69,7 +69,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_mouseMovePoint(QPoint point)
 {
     labViewPos->setText(QString::asprintf("View坐标: %d, %d", point.x(), point.y()));
-    QPointF pointScene = ui->View->mapFromScene(point);
+    QPointF pointScene = ui->View->mapToScene(point);
     labScenePos->setText(QString::asprintf("Scene坐标: %.0f, %.0f", pointScene.x(), pointScene.y()));
 }
 

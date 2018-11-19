@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/duobianxing.ico</file>
+        <file>images/juxing.ico</file>
+        <file>images/sanjiao.ico</file>
+        <file>images/text.ico</file>
+        <file>images/tuoyuan.ico</file>
+        <file>images/yuan.ico</file>
+        <file>images/zhixian.ico</file>
+        <file>images/below.bmp</file>
+        <file>images/delete.bmp</file>
+        <file>images/exit.bmp</file>
+        <file>images/group.BMP</file>
+        <file>images/recover.ico</file>
+        <file>images/rotate_clock_128px_1188147_easyicon.net.ico</file>
+        <file>images/rotateleft.ico</file>
+        <file>images/ungroup.BMP</file>
+        <file>images/up.bmp</file>
+        <file>images/zoomin.ico</file>
+        <file>images/zoomout.ico</file>
+    </qresource>
+</RCC>
