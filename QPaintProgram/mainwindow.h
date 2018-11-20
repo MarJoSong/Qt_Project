@@ -30,10 +30,13 @@ public:
     ~MainWindow();
 
 private slots:
-//    void on_mouseMovePoint(QPoint point);
-//    void on_mouseClicked(QPoint point);
-//    void on_mouseDoubleClicked(QPoint point);
-//    void on_keyPress(QKeyEvent *event);
+    void on_mouseMovePoint(QPoint point);
+
+    void on_mouseClicked(QPoint point);
+
+    void on_mouseDoubleClicked(QPoint point);
+
+    void on_keyPress(QKeyEvent *event);
 
     void on_actItem_Ellipse_triggered();
 
@@ -56,6 +59,18 @@ private slots:
     void on_actEdit_Front_triggered();
 
     void on_actEdit_Back_triggered();
+
+    void on_actGroup_triggered();
+
+    void on_actGroupBreak_triggered();
+
+    void on_actEdit_Delete_triggered();
+
+    void on_actItem_Triangle_triggered();
+
+    void on_actItem_Polygon_triggered();
+
+    void on_actItem_Text_triggered();
 
 private:
     Ui::MainWindow *ui;
