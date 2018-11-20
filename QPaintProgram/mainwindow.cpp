@@ -274,15 +274,12 @@ void MainWindow::on_actRotateRight_triggered()
 }
 
 void MainWindow::on_actRestore_triggered()
-{
-    int cnt = scene->selectedItems().count();
-    if(cnt!=0)
+{   
+    int cnt=scene->selectedItems().count();
+    if (cnt==1)
     {
-        for(int i=0; i<cnt; i++)
-        {
-            QGraphicsItem* item = scene->selectedItems().at(i);
-            item->resetTransform();
-        }
+        QGraphicsItem* item=scene->selectedItems().at(0);
+        item->resetTransform();
     }
     else
         ui->View->resetTransform();
