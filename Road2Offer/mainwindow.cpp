@@ -17,9 +17,16 @@ void MainWindow::openTable() {
     return;
   }
 
-  tabModel->setHeaderData(tabModel->fieldIndex("Id"), Qt::Horizontal, "编号");
-  tabModel->setHeaderData(tabModel->fieldIndex("Describe"), Qt::Horizontal,
-                          "描述");
+  tabModel->setHeaderData(tabModel->fieldIndex("FAQId"), Qt::Horizontal,
+                          "编号");
+  tabModel->setHeaderData(tabModel->fieldIndex("FAQName"), Qt::Horizontal,
+                          "题目");
+  tabModel->setHeaderData(tabModel->fieldIndex("QuestionTypeId"),
+                          Qt::Horizontal, "类别");
+  tabModel->setHeaderData(tabModel->fieldIndex("CreateTime"), Qt::Horizontal,
+                          "创建时间");
+  tabModel->setHeaderData(tabModel->fieldIndex("Answer"), Qt::Horizontal,
+                          "答案");
 
   theSelection = new QItemSelectionModel(tabModel);
 #if 0
@@ -30,6 +37,7 @@ void MainWindow::openTable() {
 #endif
   ui->tableView->setModel(tabModel);
   ui->tableView->setSelectionModel(theSelection);
+  ui->tableView->setColumnHidden(tabModel->fieldIndex("Answer"), true);
 }
 
 void MainWindow::replyFinished(QNetworkReply *reply) {
@@ -111,3 +119,34 @@ void MainWindow::on_fileImp_triggered() {
   }
   openTable();
 }
+
+void MainWindow::on_tableView_doubleClicked(const QModelIndex &index) {
+  int curRecNo = index.row();
+  QSqlRecord curRec = tabModel->record(curRecNo);
+  if (curRec.isNull("Answer")) {
+    QMessageBox::information(this, "信息", "尚未为此问题放置答案",
+                             QMessageBox::Ok, QMessageBox::NoButton);
+  } else {
+    QString str = curRec.value("Answer").toString();
+    QMessageBox::information(this, "信息", str, QMessageBox::Ok,
+                             QMessageBox::NoButton);
+  }
+}
+
+void MainWindow::on_rbBasic_clicked() {
+  tabModel->setFilter("QuestionTypeId=1");
+}
+
+void MainWindow::on_rbAdvance_clicked() {
+  tabModel->setFilter("QuestionTypeId=2");
+}
+
+void MainWindow::on_rbSystem_clicked() {
+  tabModel->setFilter("QuestionTypeId=3");
+}
+
+void MainWindow::on_rbNetwork_clicked() {
+  tabModel->setFilter("QuestionTypeId=4");
+}
+
+void MainWindow::on_rbAll_clicked() { tabModel->setFilter(""); }
