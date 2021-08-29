@@ -16,6 +16,7 @@
 #include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QNetworkRequest>
 
+#include "qformtable.h"
 #include "stdafx.h"
 
 QT_BEGIN_NAMESPACE
@@ -40,21 +41,7 @@ class MainWindow : public QMainWindow {
   void replyFinished(QNetworkReply *reply);
   void ontimeOut();
 
-  void on_fileNew_triggered();
-
-  void on_fileImp_triggered();
-
-  void on_tableView_doubleClicked(const QModelIndex &index);
-
-  void on_rbBasic_clicked();
-
-  void on_rbAdvance_clicked();
-
-  void on_rbSystem_clicked();
-
-  void on_rbNetwork_clicked();
-
-  void on_rbAll_clicked();
+  void fileImp_triggered();
 
  protected:
   void GetOneWords();

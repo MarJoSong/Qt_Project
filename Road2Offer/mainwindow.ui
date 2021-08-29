@@ -6,101 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>508</width>
-    <height>444</height>
+    <width>823</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>不去网易我是狗</string>
+   <string>阿巴阿巴</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="title">
-         <string>分类</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="6">
-          <widget class="QRadioButton" name="rbDataStru">
-           <property name="text">
-            <string>数据结构</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QRadioButton" name="rbSystem">
-           <property name="text">
-            <string>系统编程</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QRadioButton" name="rbAdvance">
-           <property name="text">
-            <string>STL/GE</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QRadioButton" name="rbBasic">
-           <property name="text">
-            <string>C/C++基础</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <widget class="QRadioButton" name="rbNetwork">
-           <property name="text">
-            <string>网络编程</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QRadioButton" name="rbDesignmode">
-           <property name="text">
-            <string>设计模式</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QRadioButton" name="rbDatabase">
-           <property name="text">
-            <string>数据库</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="4">
-          <widget class="QRadioButton" name="rbOS">
-           <property name="text">
-            <string>操作系统</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QRadioButton" name="rbAlgorithm">
-           <property name="text">
-            <string>算法</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QRadioButton" name="rbAll">
-           <property name="text">
-            <string>全选</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTableView" name="tableView"/>
+       <widget class="QTabWidget" name="tabWidget"/>
       </item>
      </layout>
     </item>
@@ -111,7 +29,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>508</width>
+     <width>823</width>
      <height>23</height>
     </rect>
    </property>
@@ -136,7 +54,7 @@
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="fileAdd">
    <property name="icon">
     <iconset resource="res.qrc">
@@ -174,6 +92,10 @@
    </property>
   </action>
   <action name="fileImp">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/new.png</normaloff>:/images/images/new.png</iconset>
+   </property>
    <property name="text">
     <string>导入</string>
    </property>
@@ -192,6 +114,18 @@
    </property>
    <property name="toolTip">
     <string>只读</string>
+   </property>
+  </action>
+  <action name="actDetailPage">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/new.png</normaloff>:/images/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>详情页</string>
+   </property>
+   <property name="toolTip">
+    <string>打开详情页</string>
    </property>
   </action>
  </widget>
