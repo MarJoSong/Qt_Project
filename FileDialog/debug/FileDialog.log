@@ -1,0 +1,33 @@
+﻿  Generate moc_predefs.h
+  UIC widget.ui
+  MOC widget.h
+  main.cpp
+  widget.cpp
+D:\CODE\Qt_Project\FileDialog\widget.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CODE\Qt_Project\FileDialog\widget.cpp(26,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(27,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(46,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(47,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(90,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(91,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(103,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(104,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(122,31): warning C4305: “初始化”: 从“double”到“float”截断
+D:\CODE\Qt_Project\FileDialog\widget.cpp(139,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(140,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(157,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(158,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(158,23): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(159,18): error C2143: 语法错误: 缺少“;”(在“QMessageBox::information”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(165,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(166,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(166,23): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(167,18): error C2143: 语法错误: 缺少“;”(在“QMessageBox::warning”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(172,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(173,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(180,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(181,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+D:\CODE\Qt_Project\FileDialog\widget.cpp(187,24): error C2001: 常量中有换行符
+D:\CODE\Qt_Project\FileDialog\widget.cpp(188,5): error C2146: 语法错误: 缺少“;”(在标识符“QString”的前面)
+  moc_widget.cpp
+  正在生成代码...

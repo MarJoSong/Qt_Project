@@ -1,4 +1,4 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 
 #include <QWidget>
@@ -7,49 +7,48 @@ namespace Ui {
 class Widget;
 }
 
-class Widget : public QWidget
-{
-    Q_OBJECT
+class Widget : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit Widget(QWidget *parent = 0);
-    ~Widget();
+ public:
+  explicit Widget(QWidget *parent = 0);
+  ~Widget();
 
-private slots:
-    void on_btnOpen_clicked();
+ private slots:
+  void btnOpen_clicked();
 
-    void on_btnOpenMulti_clicked();
+  void btnOpenMulti_clicked();
 
-    void on_btnSelDir_clicked();
+  void btnSelDir_clicked();
 
-    void on_btnSave_clicked();
+  void btnSave_clicked();
 
-    void on_btnColor_clicked();
+  void btnColor_clicked();
 
-    void on_btnFont_clicked();
+  void btnFont_clicked();
 
-    void on_btnInputString_clicked();
+  void btnInputString_clicked();
 
-    void on_btnInputInt_clicked();
+  void btnInputInt_clicked();
 
-    void on_btnInputDouble_clicked();
+  void btnInputDouble_clicked();
 
-    void on_btnInputItem_clicked();
+  void btnInputItem_clicked();
 
-    void on_btnClear_clicked();
+  void btnClear_clicked();
 
-    void on_btnMsgInformation_clicked();
+  void btnMsgInformation_clicked();
 
-    void on_btnMsgWarning_clicked();
+  void btnMsgWarning_clicked();
 
-    void on_btnMsgCritical_clicked();
+  void btnMsgCritical_clicked();
 
-    void on_btnMsgAbout_clicked();
+  void btnMsgAbout_clicked();
 
-    void on_btnMsgQuestion_clicked();
+  void btnMsgQuestion_clicked();
 
-private:
-    Ui::Widget *ui;
+ private:
+  Ui::Widget *ui;
 };
 
-#endif // WIDGET_H
+#endif  // WIDGET_H
